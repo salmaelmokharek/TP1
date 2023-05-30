@@ -1,0 +1,42 @@
+.badge-cars {
+  background-color:#999999;
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.badge-electronic {
+  background-color:  #5C5CFF;
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.badge-fashion {
+  background-color: #EA5244;
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.badge-jewellery {
+  background-color: #E9CAFF;
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* .badge{
+    background-color: #ededed;
+    color: #000000;
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  } */
+
+

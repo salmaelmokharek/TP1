@@ -1,0 +1,62 @@
+
+
+<div class="rows">
+<div style="text-align: center;">
+  <h1>PRODUCTS APP</h1>
+ </div><br>
+
+<div class="row">
+
+  <div style="margin: auto;" class="col-md-5 " >
+   <input class="form-control me-sm-2" type="search" placeholder="Search by Name" [(ngModel)]="searchName" >
+ </div>
+   <div style="margin: auto;" class="col-md-5 " >
+  <input class="form-control me-sm-2" type="search"  placeholder="Search By Category "[(ngModel)]="searchCat" >
+ </div>
+
+
+</div>
+
+<hr>
+<br>
+
+  <!-- <ul>
+    <li *ngFor="let product of products" *ngIf="!searchCategory || product.category.toLowerCase() === searchCategory.toLowerCase()">
+      {{ product.title }}
+    </li>
+  </ul> -->
+
+  <!-- <div class="col-md-6">
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let product of products" >
+
+          <label >{{product.title}}</label>
+          <span class="badge bg-primary rounded-pill ">{{product.categorie}} </span>
+     </li>
+   </ul>
+
+ </div>
+
+</div> -->
+<table style="border-color: black; " class="table table-hover ">
+  <thead>
+    <tr>
+      <th scope="col">N° PRODUCT</th>
+      <th scope="col">PRODUCT NAME</th>
+      <th scope="col">PRICE</th>
+      <th scope="col">CATEGORY</th>
+    </tr>
+  </thead>
+
+  <tbody *ngFor="let product of products" >
+    <tr  class="table-default" *ngIf="(searchCat === '' || product.category.toLowerCase().includes(searchCat.toLowerCase())) &&
+                                      (searchName === '' || product.title.toLowerCase().includes(searchName.toLowerCase()))">
+      <td>{{product.pnumber}}</td>
+      <td>{{product.title}}</td>
+      <td>{{product.price}}</td>
+      <td><span class="badge  rounded-pill" [ngClass]="getCategoryClass(product.category)">{{product.category}} </span></td>
+    </tr>
+
+  </tbody>
+</table>
+
